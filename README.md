@@ -1,10 +1,7 @@
-Your README has a few formatting issues, mostly related to markdown code block delimiters and inconsistent backticks. Here's a cleaned-up, fixed version with proper code fences and spacing that should render correctly on GitHub:
-
-```markdown
 # Task Manager API
 
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.110.0-009688?style=flat&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
-[![Python](https://img.shields.io/badge/Python-3.11+-blue.svg?logo=python)](https://www.python.org/downloads/)
+[![Python](https://img.shields.io/badge/Python-3.12+-blue.svg?logo=python)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A secure, fully-featured RESTful API built with FastAPI and SQLAlchemy. It allows users to register, log in, and manage personal tasks with proper authentication and authorization using JSON Web Tokens (JWT).
@@ -23,7 +20,7 @@ A secure, fully-featured RESTful API built with FastAPI and SQLAlchemy. It allow
 
 ## Tech Stack
 
-- **Python 3.11+**
+- **Python 3.12+**
 - **FastAPI**
 - **SQLAlchemy**
 - **SQLite** (easily swappable for PostgreSQL or MySQL)
@@ -35,7 +32,6 @@ A secure, fully-featured RESTful API built with FastAPI and SQLAlchemy. It allow
 ## Directory Structure
 
 ```
-
 TaskManagerAPIProject/
 ├── app/
 │   ├── auth.py              # JWT creation and password hashing
@@ -48,9 +44,11 @@ TaskManagerAPIProject/
 │   └── routers/
 │       ├── task.py          # Task endpoints
 │       └── user.py          # User endpoints (register/login)
-└── requirements.txt
-
-````
+├── requirements.txt         # Python dependencies
+├── run.py                  # Alternative server startup
+├── task_manager.db         # SQLite database (auto-generated)
+└── README.md               # This file
+```
 
 ---
 
@@ -59,9 +57,9 @@ TaskManagerAPIProject/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/Razor1889/task-manager-api.git
-cd task-manager-api
-````
+git clone https://github.com/Razor1889/TaskManagerAPIProject.git
+cd TaskManagerAPIProject
+```
 
 ### 2. Set Up the Virtual Environment
 
@@ -119,9 +117,17 @@ You can also authorize inside the `/docs` UI by clicking the **Authorize** butto
 
 ---
 
+## Database
+
+The application uses SQLite by default. The database file (`task_manager.db`) is automatically created when you first run the application. The database contains:
+
+- **users** table: User accounts with hashed passwords
+- **tasks** table: User tasks with ownership relationships
+
+---
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
 
-```
-```
+
