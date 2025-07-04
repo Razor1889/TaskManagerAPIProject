@@ -1,3 +1,5 @@
+Your README has a few formatting issues, mostly related to markdown code block delimiters and inconsistent backticks. Here's a cleaned-up, fixed version with proper code fences and spacing that should render correctly on GitHub:
+
 ```markdown
 # Task Manager API
 
@@ -121,4 +123,5 @@ You can also authorize inside the `/docs` UI by clicking the **Authorize** butto
 
 This project is licensed under the [MIT License](LICENSE).
 
-
+```
+```
